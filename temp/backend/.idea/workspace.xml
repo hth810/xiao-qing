@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="672c24f9-b2f8-4604-bdc9-e0a5c245f63c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/temp/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/XiaoQingApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/controller/ClapController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/interceptors/LoginInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/mapper/ClapMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/pojo/Clap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/pojo/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/pojo/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/service/ClapService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/service/impl/ClapServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/utils/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/utils/Md5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/java/com/school/utils/ThreadLocalUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/backend/src/test/java/com/school/AppTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "hth810"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:hth810/xiao-qing.git",
+    "accountId": "ec5df570-0ec3-4acc-aeb9-64e68adefb50"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2tW5iqOyOfHYsVzXhm3N4HxIMih" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.XiaoQingApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IdeaProjects/xiao-qing",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="XiaoQingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="xiao-qing" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.school.XiaoQingApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.school.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.XiaoQingApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="672c24f9-b2f8-4604-bdc9-e0a5c245f63c" name="Changes" comment="" />
+      <created>1740455121754</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740455121754</updated>
+      <workItem from="1740455122725" duration="18597000" />
+      <workItem from="1740485951474" duration="647000" />
+      <workItem from="1740491890809" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
