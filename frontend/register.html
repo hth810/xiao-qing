@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <button class="close-btn" onclick="window.top.postMessage('closeDialog', '*');">x</button>
+        <h2>注册</h2>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="用户名" required>
+            <input type="password" id="password" placeholder="密码" required>
+            <button type="submit">提交</button>
+        </form>
+        <p class="message" id="message"></p>
+    </div>
+    <script>
+        document.getElementById("registerForm").addEventListerner("submit",function(event){
+            event.preventDefault(); //阻止表单默认提交
+            let username=document.getElementById("username").value.trim(); //trim()去除字符串两端空格
+            let password=document.getElementById("password").value.trim();
+            let messageBox=document.getElementById("message");
+
+            //简单的前端验证
+            if(username.length<5||username.length>16||password.length<6||password.length>16){
+                messageBox.textContent="用户名和密码长度必须在5-16之间";
+                return;
+            }
+            // 发送 AJAX 请求
+            fetch("/user/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username: username, password: password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.code === 0) {
+                    messageBox.style.color = "green";
+                    messageBox.textContent = "注册成功！";
+                    setTimeout(() => {
+                        window.parent.document.getElementById('registerDialog').close();
+                    }, 1000); // 1秒后关闭窗口
+                } else {
+                    messageBox.style.color = "red";
+                    messageBox.textContent = data.message;
+                }
+            })
+            .catch(error => {
+                console.error("请求失败:", error);
+                messageBox.textContent = "请求失败，请检查网络";
+            });
+        });
+    </script>
+</body>
+</html>

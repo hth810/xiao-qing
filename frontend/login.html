@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>校庆活动平台</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <div class="box">
+            <h2>登录</h2>
+            <div class="input-box">
+                <label>账号</label>
+                <input type="text">
+            </div>
+            <div class="input-box">
+                <label>密码</label>
+                <input type="password">
+            </div>
+            <div class="btn-box">
+                <a href="javascript:void(0)" class="btn">忘记密码？</a>
+                <div>
+                    <button>登录</button>
+                    <button onclick="openRegisterDialog()">注册</button>
+                    <!--弹出注册窗口-->
+                    <dialog id="registerDialog">
+                        <iframe src="register.html" width="500" height="400"></iframe>
+                      </dialog>
+                      
+                      <script>
+                        function openRegisterDialog() {
+                          var dialog = document.getElementById("registerDialog");
+                          dialog.showModal();
+                        }
+                        window.addEventListener("message", function(event) {
+                            if (event.data === "closeDialog") {
+                            document.getElementById("registerDialog").close();
+                        }
+                        });
+
+                      </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
