@@ -11,17 +11,18 @@
             <h2>登录</h2>
             <div class="input-box">
                 <label>账号</label>
-                <input type="text">
+                <input type="text" id="username">
             </div>
             <div class="input-box">
                 <label>密码</label>
-                <input type="password">
+                <input type="password" id="password">
             </div>
             <div class="btn-box">
                 <a href="javascript:void(0)" class="btn">忘记密码？</a>
                 <div>
-                    <button>登录</button>
+                    <button onclick="login()">登录</button>
                     <button onclick="openRegisterDialog()">注册</button>
+                    <p class="message" id="messageBox"></p>
                     <!--弹出注册窗口-->
                     <dialog id="registerDialog">
                         <iframe src="register.html" width="500" height="400"></iframe>
@@ -37,6 +38,43 @@
                             document.getElementById("registerDialog").close();
                         }
                         });
+                    <!--登录验证-->
+                        function login(){
+                            const username=document.getElementById("username").value;
+                            const password=document.getElementById("password").value;
+                            const messageBox=document.getElementById("messageBox");
+
+                            //简单的前端验证
+                        if(username.length<5||username.length>16||password.length<6||password.length>16){
+                            messageBox.textContent="用户名和密码长度必须在5-16之间";
+                            return;
+                            }
+                            // 发送 AJAX 请求
+                            fetch("http://localhost:8080/user/login", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                                body: new URLSearchParams({ username: username, password: password }).toString()
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.code === 0) {
+                                    messageBox.style.color = "green";
+                                    messageBox.textContent = "登录成功！";
+                                    localStorage.setItem("token", data.data); // 存储 token
+                                    setTimeout(() => {
+                                        window.location.href = "index.html"; // 登录成功后跳转到主页
+                                    }, 1000);
+                                } else {
+                                    messageBox.style.color = "red";
+                                    messageBox.textContent = data.message;
+                                }
+                            })
+                            .catch(error => {
+                                console.error("请求失败:", error);
+                                messageBox.textContent = "请求失败，请检查网络";
+                            });
+                        }
+
 
                       </script>
                 </div>
