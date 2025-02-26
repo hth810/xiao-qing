@@ -18,7 +18,7 @@
         <p class="message" id="message"></p>
     </div>
     <script>
-        document.getElementById("registerForm").addEventListerner("submit",function(event){
+        document.getElementById("registerForm").addEventListener("submit",function(event){
             event.preventDefault(); //阻止表单默认提交
             let username=document.getElementById("username").value.trim(); //trim()去除字符串两端空格
             let password=document.getElementById("password").value.trim();
@@ -30,9 +30,9 @@
                 return;
             }
             // 发送 AJAX 请求
-            fetch("/user/register", {
+            fetch("http://localhost:8080/user/register", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: JSON.stringify({ username: username, password: password })
             })
             .then(response => response.json())
