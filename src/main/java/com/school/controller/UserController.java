@@ -29,7 +29,7 @@ public class UserController {
             userService.register(username, password);
             return Result.success();
         } else {
-            return Result.error("用户名已存在");
+            return Result.error("用户已存在");
         }
     }
 
@@ -51,8 +51,8 @@ public class UserController {
     }
     @GetMapping("/userInfo")
     public Result<User> userInfo(/*@RequestHeader(name="Authorization") String token*/){
-        /*Map<String, Object> map = JwtUtil.parseToken(token);
-        String username = (String)map.get("username");*/
+//        Map<String, Object> map = JwtUtil.parseToken(token);
+//        String username = (String)map.get("username");
         Map<String, Object> map = ThreadLocalUtil.get();
         String username = (String)map.get("username");
         User user =userService.findByUserName(username);
