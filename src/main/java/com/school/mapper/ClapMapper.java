@@ -1,5 +1,6 @@
 package com.school.mapper;
 
+import com.school.pojo.Clap;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -12,4 +13,7 @@ public interface ClapMapper {
 
     @Select("select count(*) from clap")
     long getTotalParticipants();
+
+    @Select("select * from clap where user_name = #{username}")
+    Clap findByUserName(String username);
 }

@@ -16,7 +16,10 @@ public class ClapServiceImpl implements ClapService {
     @Autowired
     private ClapMapper clapMapper;
 
-
+    @Override
+    public Clap findByUserName(String username) {
+        return clapMapper.findByUserName(username);
+    }
     @Override
     public void participate(String username) {
         clapMapper.participate(username);

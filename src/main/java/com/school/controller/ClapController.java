@@ -2,6 +2,7 @@ package com.school.controller;
 
 import com.school.mapper.ClapMapper;
 import com.school.mapper.UserMapper;
+import com.school.pojo.Clap;
 import com.school.pojo.Result;
 import com.school.pojo.User;
 import com.school.service.ClapService;
@@ -23,10 +24,15 @@ public class ClapController {
     public Result<Boolean> participate(@RequestBody @Validated User user) {
         if (user.getParticipated()==false) {
             String username = user.getUsername();
-            user.setParticipated(true);
-            userService.participate(user);
-            clapService.participate(username);
-            return Result.success();
+            Clap clap = clapService.findByUserName(username);
+            if (clap==null) {
+                user.setParticipated(true);
+                userService.participate(user);
+                clapService.participate(username);
+                return Result.success();
+            }
+            return Result.error("您已参与过活动");
+
         }else {
             return Result.error("您已参与过活动");
         }
