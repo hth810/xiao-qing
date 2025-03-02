@@ -12,7 +12,7 @@
       <!-- 动态文字 -->
       <div class="text" v-if="hasParticipated">
         「你是北洋头条人物」 <br>
-        第  {{ totalParticipants }} 位突破时空壁垒的击掌者你好，<br>
+        第  {{ place }} 位突破时空壁垒的击掌者你好，<br>
         恭喜你与其他 {{ totalParticipants-1 }} 名 TJUER 共同为天大庆生
       </div>
 
@@ -24,6 +24,7 @@
 
 <script>
 import axios from "axios";
+import totalParticipants from "@/components/TotalParticipants.vue";
 
 export default {
   data() {
@@ -32,6 +33,7 @@ export default {
       totalParticipants: 0,
       userInfo: null, // 用于存储用户信息
       hasParticipated: false,
+      place: 0,
     };
   },
   created() {
@@ -55,6 +57,7 @@ export default {
         this.userInfo = response.data.data;
         this.username = this.userInfo.username;
         this.hasParticipated = this.userInfo.participated;
+        this.place = this.userInfo.place;
       } catch (error) {
         console.error("获取用户信息失败", error);
       }
@@ -95,6 +98,7 @@ export default {
         if (response.data.code === 0) {
           // 成功参与，更新总参与人数
           this.totalParticipants += 1;
+          this.place = this.totalParticipants;
           alert("参与活动成功！");
           this.hasParticipated = true;
         } else {
