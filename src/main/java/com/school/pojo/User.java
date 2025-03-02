@@ -22,6 +22,7 @@ public class User {
     private String email;
     private String userPic;
     private Boolean participated;
+    private Long place;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
 }

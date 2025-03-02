@@ -1,7 +1,9 @@
 package com.school.controller;
 
+import com.school.pojo.Clap;
 import com.school.pojo.Result;
 import com.school.pojo.User;
+import com.school.service.ClapService;
 import com.school.service.UserService;
 import com.school.utils.JwtUtil;
 import com.school.utils.Md5Util;
@@ -20,6 +22,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private ClapService clapService;
 
     @PostMapping("/register")
     public Result register(@Pattern(regexp = "^\\S{5,16}$") String username, @Pattern(regexp = "^\\S{5,16}$") String password) {
@@ -56,6 +60,11 @@ public class UserController {
         Map<String, Object> map = ThreadLocalUtil.get();
         String username = (String)map.get("username");
         User user =userService.findByUserName(username);
+        if (user.getParticipated()){
+            Clap clap = clapService.findByUserName(username);
+            long place = clap.getId();
+            user.setPlace(place);
+        }
         return Result.success(user);
     }
     @PutMapping("/update")

@@ -43,5 +43,4 @@ public class ClapController {
         long totalParticipants = clapService.getTotalParticipants();
         return Result.success(totalParticipants);
     }
-
 }
