@@ -129,8 +129,8 @@ body, html {
 /* 背景容器 */
 .background {
   position: relative; /* 相对定位，用于放置文字和按钮 */
-  width: 100vw; /* 宽度为视口宽度的 80% */
-  height: 60vh; /* 高度为视口高度的 40% */
+  width: 70vw; /* 宽度为视口宽度的 80% */
+  height: 42vh; /* 高度为视口高度的 40% */
   min-width: 300px; /* 最小宽度 */
   min-height: 200px; /* 最小高度 */
   background-size: cover; /* 背景图片覆盖整个容器 */
@@ -139,6 +139,8 @@ body, html {
   margin-bottom: 20px; /* 在第一个背景下方添加 20px 的空白 */
   border-radius: 15px; /* 添加圆角 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 第一个背景 */
