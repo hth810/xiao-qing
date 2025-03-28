@@ -5,8 +5,10 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class Clap {
+public class Achievement {
     private Long id;
     private String username;
+    private String achievementName;
     private LocalDateTime createTime;
+
 }
